@@ -1,0 +1,18 @@
+apiVersion: V1
+kind: Pod
+
+metadata:
+   name: initCpod
+   labels:
+      env: PROD
+      
+spec:
+   containers:
+      - name: container1
+        image: nginx:latest
+        args: ["sleep", "30"]
+   
+   initContainers:
+      - name: initcont1
+        image: httpd:latest
+        args: ["sleep", "10"]
