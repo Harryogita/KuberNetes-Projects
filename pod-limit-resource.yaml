@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+
+metadata:
+   name: podwithlimit
+   labels:
+      app: harrysapp
+      type: frontend
+      
+spec: 
+   containers:
+      - name: harrysapp-container
+        image: httpd:latest
+        resource:
+           requests:
+               memory: 200mi
+               cpu: 100m
+               
+               
