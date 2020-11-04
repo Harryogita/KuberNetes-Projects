@@ -1,0 +1,19 @@
+apiVersion: V1
+kind: Pod
+
+metadata: 
+    name: thirdPod
+    labels:
+        label1: PROD
+        label2: UAT
+        
+spec:
+   - name: container1
+     image: httpd
+     env:
+        - name: Uname
+          value: Harry
+        - name: City
+          value: Pune
+          
+     arg: ["sleep" ,"50"]
