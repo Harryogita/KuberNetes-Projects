@@ -7,11 +7,15 @@ metadata:
           env: PROD
           
 spec:
-     type: NodePort
-     ports:
-         - nodePort: 32000
-           ports: 9800
-           targetPort: 80
+    containers:
+           type: NodePort
+           ports:
+               - nodePort: 32000
+                 ports: 9800
+                 targetPort: 80
            
-     selector: 
-           type: app
+           selector: 
+                 type: app
+
+
+# Please follow identation as this is yaml , i may missed somewhere some spaces which might cause failure if you just copy paste code.
