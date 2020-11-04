@@ -1,0 +1,19 @@
+apiVersion: V1
+kind: ReplicationController
+
+metadata:
+   name: firstrc
+   labels:
+        type: PROD
+        
+ spec:
+    replicas: 5
+    templates:
+         metadata: 
+                name: firstpod
+                labels:
+                     type: app
+         spec:
+                containers:
+                     - name: containerRC
+                       image: httpd
