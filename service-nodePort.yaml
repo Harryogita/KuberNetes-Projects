@@ -1,0 +1,17 @@
+apiVersion: V1
+kind: Service
+
+metadata: 
+     name: svcnodeport1
+     label:
+          env: PROD
+          
+spec:
+     type: NodePort
+     ports:
+         - nodePort: 32000
+           ports: 9800
+           targetPort: 80
+           
+     selector: 
+           type: app
