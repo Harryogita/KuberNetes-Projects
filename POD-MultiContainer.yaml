@@ -1,0 +1,22 @@
+apiVersion: V1
+kind: Pod
+
+metadata:
+    name: multicontainerPOD
+    labels:
+       linux: PROD
+       windows: UAT
+       
+spec:
+    containers:
+          - name: cont-1
+            image: nginx:latest
+            args: ["sleep", "30"]
+     
+          - name: cont-2
+            image: apache:latest
+            args: ["sleep", "30"]
+            
+            
+            
+     
