@@ -4,7 +4,7 @@ kind: ReplicationController
 metadata:
    name: firstrc
    labels:
-        type: PROD
+        appname: votingApp
         
  spec:
     replicas: 5
