@@ -8,14 +8,14 @@ metadata:
        env: Pre-deploy
        
 spec:
-   containers:
-     - name: first-container
-       image: httpd
-       env: 
-          - name: evar1
-            value: mysql
-          - name: evar2
-            value: oracle
+  containers:
+    - name: first-container
+      image: httpd
+      env: 
+         - name: evar1
+           value: mysql
+         - name: evar2
+           value: oracle
             
             
             
