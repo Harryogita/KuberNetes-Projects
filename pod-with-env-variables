@@ -1,0 +1,22 @@
+apiVersion: V1
+kind: Pod
+
+metadata:
+   name: second-pod
+   label:
+       env: UAT
+       env: Pre-deploy
+       
+spec:
+   containers:
+     - name: first-container
+       image: httpd
+       env: 
+          - name: evar1
+            value: mysql
+          - name: evar2
+            value: oracle
+            
+            
+            
+      
