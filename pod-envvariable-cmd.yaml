@@ -8,12 +8,17 @@ metadata:
         label2: UAT
         
 spec:
-   - name: container1
-     image: httpd
-     env:
-        - name: Uname
-          value: Harry
-        - name: City
-          value: Pune
+    containers:
+          - name: container1
+            image: httpd
+            env:
+                - name: Uname
+                  value: Harry
+                - name: City
+                  value: Pune
           
-     arg: ["sleep" ,"50"]
+            arg: ["sleep" ,"50"]
+
+
+
+# Please follow identation as this is yaml , i may missed somewhere some spaces which might cause failure if you just copy paste code.
