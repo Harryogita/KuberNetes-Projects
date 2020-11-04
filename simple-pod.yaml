@@ -6,8 +6,9 @@ metadata:
    label:
        env:PROD
 spec:
- - name: container-1
-   image: httpd
+   containers:
+       - name: container-1
+         image: httpd
      
      
      
