@@ -1,0 +1,14 @@
+apiVersion: V1
+kind: Pod
+
+metadata:
+   name: first-pod
+   label:
+       env:PROD
+spec:
+ - name: container-1
+   image: httpd
+     
+     
+     
+# Please follow identation as this is yaml , i may missed somewhere some spaces which might cause failure if you just copy paste code.
